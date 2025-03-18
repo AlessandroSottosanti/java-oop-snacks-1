@@ -11,6 +11,10 @@ public class run {
 
         // inizializzazione studente tramite costruttore
         Studente carlo = new Studente("Carlo", "Lancelotti", 16);
+        Studente Franco = new Studente("Franco", "Rossi", 16);
+        Studente Mario = new Studente("Mario", "Verdi", 16);
+
+
 
         // output
         System.out.println("");
@@ -20,6 +24,7 @@ public class run {
         System.out.println(Studente.getStudente(carlo.getNome(), carlo.getCognome(), carlo.getEta()));
 
         System.out.println("");
+
 
 
         // SNACK 2
@@ -45,5 +50,27 @@ public class run {
 
         System.out.println("Preleva 20$ = " + "Saldo: " + conto.getSaldo() + "$");
 
+
+
+        // SNACK 3
+
+        System.out.println("Snack 3");
+
+        RegistroStudenti registro = new RegistroStudenti();
+
+        registro.addStudente(carlo);
+        registro.mostraStudenti();
+
+        System.out.println("");
+        
+        registro.addStudente(Franco);
+        registro.mostraStudenti();
+
+        System.out.println("");
+
+        registro.addStudente(Mario);
+        registro.mostraStudenti();
+
+        System.out.println("");
     }
 }
