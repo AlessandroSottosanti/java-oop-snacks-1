@@ -50,12 +50,14 @@ public class run {
 
         System.out.println("Preleva 20$ = " + "Saldo: " + conto.getSaldo() + "$");
 
+        System.out.println("");
 
 
         // SNACK 3
 
         System.out.println("Snack 3");
 
+        // Inizializzazione nuovo registro
         RegistroStudenti registro = new RegistroStudenti();
 
         registro.addStudente(carlo);
