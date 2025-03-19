@@ -22,13 +22,19 @@ public class ContoBancario {
     }
 
     // preleva
-    public void preleva(BigDecimal prelievo) {
-        this.saldo = this.saldo.subtract(prelievo);
+    public boolean preleva(BigDecimal prelievo) {
+        if(prelievo.compareTo(new BigDecimal(0)) == 1 && this.saldo.compareTo(prelievo) == 1) {
+            this.saldo = this.saldo.subtract(prelievo);
+            return true;
+        }
+        return false;
     }
 
     // deposita
     public void deposita(BigDecimal deposito) {
-        this.saldo = this.saldo.add(deposito);
+        if (deposito.compareTo(new BigDecimal(0)) == 1) {
+            this.saldo = this.saldo.add(deposito);
+        }
     }
 
 }

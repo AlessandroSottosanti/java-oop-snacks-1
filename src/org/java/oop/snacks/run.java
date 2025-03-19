@@ -11,8 +11,8 @@ public class run {
 
         // inizializzazione studente tramite costruttore
         Studente carlo = new Studente("Carlo", "Lancelotti", 16);
-        Studente Franco = new Studente("Franco", "Rossi", 16);
-        Studente Mario = new Studente("Mario", "Verdi", 16);
+        Studente Franco = new Studente("Franco", "Rossi", 17);
+        Studente Mario = new Studente("Mario", "Verdi", 18);
 
 
 
@@ -46,12 +46,18 @@ public class run {
 
         // Preleva
 
-        conto.preleva(new BigDecimal(20));
+        boolean puoPrelevare = conto.preleva(new BigDecimal(20));
 
-        System.out.println("Preleva 20$ = " + "Saldo: " + conto.getSaldo() + "$");
+        if(puoPrelevare) {
+            System.out.println("Preleva 20$ = " + "Saldo: " + conto.getSaldo() + "$");
 
-        System.out.println("");
+            System.out.println("");
+        }
 
+        
+        else {
+            System.out.println("saldo insufficiente per il prelievo richiesto");
+        }
 
         // SNACK 3
 
